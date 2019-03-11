@@ -101,6 +101,9 @@ function getAdress(geocordinates){
       $(`.${i}address`).append(
       `${address}`)
     })
+    .catch(error){
+      alert(error)
+    }
   })
   }
 }
