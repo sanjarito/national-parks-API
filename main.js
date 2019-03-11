@@ -19,9 +19,9 @@ $('.state-input').on('click',function(event){
   // console.log(state_array)
 
 
-  let state_string = state_array.toString(
-    console.log(state_string)
-  )
+  let state_string = state_array.toString()
+  console.log(state_string)
+
 
 
 
