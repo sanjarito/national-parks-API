@@ -1,5 +1,5 @@
 // console.log('hello')
-const state_array = [];
+let state_array = [];
 
 $('.state-input').on('click',function(event){
   event.preventDefault()
