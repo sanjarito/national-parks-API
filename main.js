@@ -26,6 +26,7 @@ $('.state-input').on('click',function(event){
 })
 
 function getParks(state_string,max_results){
+  console.log('getparks function debug')
   let limit_results = max_results -1
   const geocordinates = []
 
