@@ -1,8 +1,8 @@
 console.log('hello')
 const state_array = [];
 
-$('.state-input').on('click',function(event){
-  event.preventDefault();
+$('.state-input').on('click',function(){
+
 
   $('.parks-container').empty()
   const state_values = $('.multiple-state')
