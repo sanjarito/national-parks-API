@@ -15,6 +15,7 @@ $('.state-input').on('click',function(event){
   }
   // console.log(state_array)
   const max_results = $('.max-results').val()
+  console.log(state_array)
 
   let state_string = state_array.toString()
 
@@ -36,13 +37,13 @@ function getParks(state_string,max_results){
 
   let parks_url = `https://developer.nps.gov/api/v1/parks`
   let parks_url2 = `https://developer.nps.gov/api/v1/parks?api_key=3CXESj6FPvSAowQ1dKe2xVYlUV5GQIb6Q5E5ecGy&stateCode=${state_string}+&limit=+${limit_results}`
-  let request = new Request(parks_url, {
-  method: 'GET',
-	mode: 'cors',
-	headers: new Headers({
-		"Authorization": '3CXESj6FPvSAowQ1dKe2xVYlUV5GQIb6Q5E5ecGy'
-	})
-});
+//   let request = new Request(parks_url, {
+//   method: 'GET',
+// 	mode: 'cors',
+// 	headers: new Headers({
+// 		"Authorization": '3CXESj6FPvSAowQ1dKe2xVYlUV5GQIb6Q5E5ecGy'
+// 	})
+// });
   fetch(parks_url2)
   .then(function(response){
     let answer = response.json()
