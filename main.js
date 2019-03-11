@@ -9,15 +9,15 @@ $('.state-input').on('click',function(event){
   const state_values = $('.multiple-state')
 
   for (let i =0; i<state_values[0].selectedOptions.length;i++){
-  console.log('blah blah')
-  console.log(state_values[0].selectedOptions[i].value)
-  let state_selection = state_values[0].selectedOptions[i].computedName
+
+  let state_selection = state_values[0].selectedOptions[i].value
   // console.log(state_selection)
   state_array.push(state_selection)
   }
   // console.log(state_array)
   const max_results = $('.max-results').val()
   // console.log(state_array)
+  console.log(state_array)
 
   let state_string = state_array.toString()
 
