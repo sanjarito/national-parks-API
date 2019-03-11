@@ -8,6 +8,7 @@ $('.state-input').on('click',function(event){
   $('.parks-container').empty()
   const state_values = $('.multiple-state')
   console.log(state_values[0][0].value)
+  console.log(state_values.length)
   for (let i =0; i<state_values[0].selectedOptions.length;i++){
   const state_selection = state_values[0].selectedOptions[i].computedName
   state_array.push(state_selection)
