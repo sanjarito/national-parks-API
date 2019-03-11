@@ -1,8 +1,10 @@
 // console.log('hello')
-let state_array = [];
+'use strict';
+
 
 $('.state-input').on('click',function(event){
   event.preventDefault()
+  let state_array = [];
 
   $('.parks-container').empty()
   const state_values = $('.multiple-state')
