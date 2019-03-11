@@ -3,7 +3,7 @@ const state_array = [];
 
 $('.state-input').on('click',function(){
   event.preventDefault();
-  $(".multiple-state").val("");
+  
   $('.parks-container').empty()
   const state_values = $('.multiple-state')
   for (let i =0; i<state_values[0].selectedOptions.length;i++){
