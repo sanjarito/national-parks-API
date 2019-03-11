@@ -43,7 +43,8 @@ function getParks(state_string,max_results){
 		'X-Api-Key': '3CXESj6FPvSAowQ1dKe2xVYlUV5GQIb6Q5E5ecGy'
 	})
 });
-  fetch(request).then(function(response){
+  fetch(parks_url)
+  .then(function(response){
     let answer = response.json()
     return answer
     .then(function(answer){
