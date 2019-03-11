@@ -34,18 +34,19 @@ function getParks(state_string,max_results){
   let limit_results = max_results -1
   const geocordinates = []
 
-  let parks_url = `https://developer.nps.gov/api/v1/parks?stateCode=CA+&limit=3`
+  let parks_url = `https://developer.nps.gov/api/v1/parks?api_key=3CXESj6FPvSAowQ1dKe2xVYlUV5GQIb6Q5E5ecGy`
   let parks_url2 = `https://developer.nps.gov/api/v1/parks?stateCode=${state_string}+&limit=+${limit_results}`
   let request = new Request(parks_url, {
   method: 'GET',
 	mode: 'cors',
 	headers: new Headers({
-		'X-Api-Key': '3CXESj6FPvSAowQ1dKe2xVYlUV5GQIb6Q5E5ecGy'
+		"Authorization": '3CXESj6FPvSAowQ1dKe2xVYlUV5GQIb6Q5E5ecGy'
 	})
 });
   fetch(parks_url)
   .then(function(response){
     let answer = response.json()
+    console.log(answer)
     return answer
     .then(function(answer){
       console.log(answer.data)
