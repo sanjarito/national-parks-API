@@ -5,15 +5,14 @@
 $('.state-input').on('click',function(event){
   event.preventDefault()
   let state_array = [];
-
   $('.parks-container').empty()
   const state_values = $('.multiple-state')
+  console.log(state_vallues[0])
   for (let i =0; i<state_values[0].selectedOptions.length;i++){
   const state_selection = state_values[0].selectedOptions[i].computedName
   state_array.push(state_selection)
-
   }
-  console.log(state_array)
+  // console.log(state_array)
   const max_results = $('.max-results').val()
 
   let state_string = state_array.toString()
