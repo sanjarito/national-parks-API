@@ -1,4 +1,4 @@
-console.log('hello')
+// console.log('hello')
 const state_array = [];
 
 $('.state-input').on('click',function(event){
@@ -14,7 +14,8 @@ $('.state-input').on('click',function(event){
   const max_results = $('.max-results').val()
 
   let state_string = state_array.toString()
-  console.log(state_string)
+  console.log('hello')
+
 
   getParks(state_string,max_results)
 
