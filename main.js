@@ -11,10 +11,11 @@ $('.state-input').on('click',function(event){
   state_array.push(state_selection)
 
   }
+  console.log(state_array)
   const max_results = $('.max-results').val()
 
   let state_string = state_array.toString()
-  console.log(state_string)
+
 
 
   getParks(state_string,max_results)
