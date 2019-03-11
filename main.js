@@ -17,7 +17,7 @@ $('.state-input').on('click',function(event){
   }
   // console.log(state_array)
   const max_results = $('.max-results').val()
-  console.log(state_array)
+  // console.log(state_array)
 
   let state_string = state_array.toString()
 
