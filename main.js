@@ -47,10 +47,8 @@ function getParks(state_string,max_results){
   fetch(parks_url2)
   .then(function(response){
     let answer = response.json()
-    console.log(answer)
     return answer
     .then(function(answer){
-      console.log(answer.data)
       for(let i=0;i<answer.data.length;i++){
       $('.parks-container').append(`
         <h1>${answer.data[i].fullName}</h1>
@@ -70,7 +68,6 @@ function getParks(state_string,max_results){
 }
 
 function getAdress(geocordinates){
-  console.log(geocordinates)
   for (let i = 0; i<geocordinates.length;i++){
     // console.log(geocordinates[i].toString())
     let latitude = geocordinates[i].replace('lat:','');
@@ -93,7 +90,6 @@ function getAdress(geocordinates){
   });
 
   fetch(request).then(function(response){
-    console.log(request)
     let answer = response.json()
     return answer
     .then(function(answer){
