@@ -1,8 +1,8 @@
 console.log('hello')
 const state_array = [];
 
-$('.state-input').on('click',function(){
-
+$('.state-input').on('click',function(event){
+  event.preventDefault()
 
   $('.parks-container').empty()
   const state_values = $('.multiple-state')
@@ -31,7 +31,7 @@ function getParks(state_string,max_results){
 
   let request = new Request(`https://developer.nps.gov/api/v1/parks?stateCode=${state_string}+&limit=+${limit_results}`, {
   method: 'GET',
-	// mode: 'cors',
+	mode: 'cors',
 	headers: new Headers({
 		'X-Api-Key': '3CXESj6FPvSAowQ1dKe2xVYlUV5GQIb6Q5E5ecGy'
 	})
