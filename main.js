@@ -9,8 +9,10 @@ $('.state-input').on('click',function(event){
   const state_values = $('.multiple-state')
 
   for (let i =0; i<state_values[0].selectedOptions.length;i++){
+  console.log('just before state values debug runs')
+  console.log(state_values[0].selectedOptions)
   let state_selection = state_values[0].selectedOptions[i].computedName
-  console.log(state_selection)
+  // console.log(state_selection)
   state_array.push(state_selection)
   }
   // console.log(state_array)
